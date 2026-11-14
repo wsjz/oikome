@@ -3545,22 +3545,25 @@ tr.screen-source {
   min-width: 0;
 }
 .screen-facts__from a {
+  justify-self: start;
   min-width: 0;
-  overflow: hidden;
+  max-width: 100%;
   color: inherit;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 .screen-facts__source {
+  justify-self: start;
   min-width: 0;
+  max-width: 100%;
   padding: 0;
-  overflow: hidden;
   border: 0;
+  border-bottom: 1px solid var(--line);
   background: none;
   font: inherit;
   text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+  white-space: normal;
   cursor: pointer;
 }
 .screen-facts__source:disabled {

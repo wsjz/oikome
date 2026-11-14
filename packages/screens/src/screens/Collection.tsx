@@ -227,7 +227,7 @@ export function Collection({ name, item, folder: openFolder = "" }: { name: stri
             <dt className="oik-label">{s.factFrom}</dt>
             {source ? (
               <dd className="screen-facts__from">
-                <Link to={`/sources/${encodeURIComponent(source.name)}`}>
+                <Link to={`/sources/${encodeURIComponent(source.name)}`} className="oik-link">
                   <span title={source.place} translate="no">
                     {homeRelative(source.place)}
                   </span>
@@ -250,7 +250,7 @@ export function Collection({ name, item, folder: openFolder = "" }: { name: stri
                   <button
                     type="button"
                     className="oik-link screen-facts__source"
-                    title={strings.sources.showFiles}
+                    title={folder.path}
                     translate="no"
                     disabled={sync.busy}
                     onClick={() => void sync.run(() => client.showFolder({ space: space.name }))}
